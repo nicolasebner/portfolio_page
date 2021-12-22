@@ -30,8 +30,6 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: rootRoute, page: () => SiteLayout()),
         GetPage(name: projectviewPageRoute, page: () => ProjectViewPage()),
-        GetPage(name: rootRoute, page: () => SiteLayout()),
-        GetPage(name: rootRoute, page: () => SiteLayout()),
       ],
       title: 'Nicolas Ebner',
       theme: ThemeData(
