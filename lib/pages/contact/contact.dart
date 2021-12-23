@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/controllers/scroll_notification_listener.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
 
 class ContactViewPage extends StatelessWidget {
@@ -7,7 +8,18 @@ class ContactViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: CustomText(text: "Contact"),
+      child: ScrollNotificationListener(
+        position: 2,
+        child: ListView(
+          children: [
+            CustomText(text: "Contact"),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              color: Colors.blue,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
