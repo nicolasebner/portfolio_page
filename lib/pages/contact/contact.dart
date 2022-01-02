@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/constants/style.dart';
+import 'package:portfolio_website/pages/contact/widgets/contact_form.dart';
+import 'package:portfolio_website/widgets/contact_row.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
 
 class ContactViewPage extends StatelessWidget {
@@ -6,8 +9,50 @@ class ContactViewPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: CustomText(text: "Contact"),
+    return ListView(
+      children: [
+        Container(
+          padding: EdgeInsets.all(12),
+          color: myligthDark,
+          child: Center(
+            child: Container(
+              padding: EdgeInsets.all(20.0),
+              decoration: BoxDecoration(
+                color: myligth,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(20),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+              ),
+              // height: 500,
+              width: 600,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  CustomText(
+                    text: "Kontakt",
+                    size: 22,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 12.0, horizontal: 200),
+                    child: ContactRow(),
+                  ),
+                  CustomText(text: "oder"),
+                  ContactForm(),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

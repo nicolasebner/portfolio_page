@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
+import 'package:portfolio_website/widgets/contact_row.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
 
 class PersonalCard extends StatelessWidget {
@@ -70,17 +71,7 @@ class PersonalCard extends StatelessWidget {
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20)),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(onPressed: () {}, icon: Icon(Icons.facebook)),
-                IconButton(onPressed: () {}, icon: Icon(Icons.whatshot)),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.where_to_vote_sharp)),
-                IconButton(
-                    onPressed: () {}, icon: Icon(Icons.table_view_outlined)),
-              ],
-            ),
+            child: ContactRow(),
           )
         ],
       ),

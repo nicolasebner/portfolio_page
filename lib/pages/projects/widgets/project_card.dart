@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/constants/filters.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
+import 'package:portfolio_website/pages/projects/widgets/project_image.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -38,15 +39,9 @@ class ProjectCard extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            child: ColorFiltered(
-              colorFilter: ColorFilter.matrix(DARKEN),
-              child: Image.asset(
-                imageRoute,
-                height: 280,
-              ),
-            ),
-            right: alignLeft ? 0 : null,
+            child: ProjectImage(imageRoute: imageRoute, height: height),
             bottom: 20,
+            right: alignLeft ? 0 : null,
           ),
           Positioned(
             right: alignLeft ? null : 0,
