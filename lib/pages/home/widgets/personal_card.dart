@@ -71,7 +71,10 @@ class PersonalCard extends StatelessWidget {
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20)),
             ),
-            child: ContactRow(),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 32),
+              child: ContactRow(),
+            ),
           )
         ],
       ),

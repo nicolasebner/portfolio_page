@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio_website/helpers/internet_service.dart';
 
 class ContactRow extends StatelessWidget {
   const ContactRow({
@@ -10,10 +12,22 @@ class ContactRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.facebook)),
-        IconButton(onPressed: () {}, icon: Icon(Icons.whatshot)),
-        IconButton(onPressed: () {}, icon: Icon(Icons.where_to_vote_sharp)),
-        IconButton(onPressed: () {}, icon: Icon(Icons.table_view_outlined)),
+        IconButton(
+            onPressed: () =>
+                openWeb("https://www.linkedin.com/in/nicolas-ebner/"),
+            icon: FaIcon(FontAwesomeIcons.linkedinIn)),
+        IconButton(
+            onPressed: () =>
+                openWeb("https://www.xing.com/profile/Nicolas_Ebner4/cv"),
+            icon: FaIcon(FontAwesomeIcons.xing)),
+        IconButton(
+            onPressed: () =>
+                openWeb("https://www.instagram.com/nicolas_ebner/"),
+            icon: FaIcon(FontAwesomeIcons.instagram)),
+        IconButton(
+            onPressed: () =>
+                openWeb("https://www.facebook.com/nicolas.ebner.9/"),
+            icon: FaIcon(FontAwesomeIcons.facebook)),
       ],
     );
   }

@@ -38,8 +38,8 @@ class _ProjectImageState extends State<ProjectImage> {
               widget.imageRoute,
             ),
             colorFilter: _hover
-                ? ColorFilter.matrix(NO_FILTER)
-                : ColorFilter.matrix(DARKEN),
+                ? null
+                : ColorFilter.mode(Colors.grey, BlendMode.modulate),
           ),
         ),
       ),

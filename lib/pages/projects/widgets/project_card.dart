@@ -13,6 +13,7 @@ class ProjectCard extends StatelessWidget {
   final String title;
   final String description;
   final String usedTech;
+  final Widget descriptionChild;
 
   const ProjectCard({
     Key? key,
@@ -23,6 +24,7 @@ class ProjectCard extends StatelessWidget {
     required this.title,
     required this.description,
     this.usedTech = "",
+    this.descriptionChild = const SizedBox(),
   }) : super(key: key);
 
   @override
@@ -39,8 +41,10 @@ class ProjectCard extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            child: ProjectImage(imageRoute: imageRoute, height: height),
-            bottom: 20,
+            child: ProjectImage(
+                imageRoute: imageRoute,
+                height: title.length > 40 ? height * 0.85 : height),
+            bottom: usedTech.length > 50 ? 45 : 20,
             right: alignLeft ? 0 : null,
           ),
           Positioned(
@@ -50,6 +54,8 @@ class ProjectCard extends StatelessWidget {
               color: myAccent,
             ),
           ),
+
+          // Title
           Positioned(
             top: 22,
             right: alignLeft ? null : 0,
@@ -67,8 +73,14 @@ class ProjectCard extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               color: myligth,
               width: widthOfCard * 0.55,
-              child: CustomText(
-                text: description,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    text: description,
+                  ),
+                  descriptionChild,
+                ],
               ),
             ),
           ),
