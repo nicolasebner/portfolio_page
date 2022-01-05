@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website/controllers/menu_controller.dart';
 import 'package:portfolio_website/controllers/navigation_controller.dart';
+import 'package:portfolio_website/helpers/messages.dart';
 import 'package:portfolio_website/layout.dart';
 import 'package:portfolio_website/pages/404/error_page.dart';
 import 'package:portfolio_website/pages/projects/projects.dart';
@@ -21,15 +22,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: Messages(),
+      locale: Get.deviceLocale,
+      fallbackLocale: const Locale("de", "DE"),
       initialRoute: homeviewPageRoute,
       unknownRoute: GetPage(
         name: "/not-found",
-        page: () => PageNotFound(),
+        page: () => const PageNotFound(),
         transition: Transition.fadeIn,
       ),
       getPages: [
         GetPage(name: rootRoute, page: () => SiteLayout()),
-        GetPage(name: projectviewPageRoute, page: () => ProjectViewPage()),
+        GetPage(
+            name: projectviewPageRoute, page: () => const ProjectViewPage()),
       ],
       title: 'Nicolas Ebner',
       theme: ThemeData(

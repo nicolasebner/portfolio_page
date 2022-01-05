@@ -1,13 +1,13 @@
 const rootRoute = "/";
 
 const homeviewPageRoute = "/home";
-const homeviewPageDisplayName = "Home";
+const homeviewPageDisplayName = "NAV_HOME";
 
 const projectviewPageRoute = "/projects";
-const projectviewPageDisplayName = "Projekte";
+const projectviewPageDisplayName = "NAV_PROJECTS";
 
 const contactviewPageRoute = "/contact";
-const contactviewPageDisplayName = "Kontakt";
+const contactviewPageDisplayName = "NAV_CONTACT";
 
 class MenuItem {
   final String name;

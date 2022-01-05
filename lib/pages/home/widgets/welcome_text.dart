@@ -4,6 +4,7 @@ import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 import 'package:portfolio_website/routing/routes.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
+import 'package:get/get.dart';
 
 class WelcomeText extends StatelessWidget {
   const WelcomeText({Key? key}) : super(key: key);
@@ -15,8 +16,8 @@ class WelcomeText extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const CustomText(text: "Hallo", weigth: FontWeight.bold, size: 66),
-          const CustomText(text: "Wer ich bin & was ich mache", size: 22),
+          CustomText(text: 'HOME_HELLO'.tr, weigth: FontWeight.bold, size: 66),
+          CustomText(text: "HOME_HELLO_CAPTION".tr, size: 22),
           Row(
             children: [
               Padding(
@@ -27,7 +28,7 @@ class WelcomeText extends StatelessWidget {
                         .changeActiveItemTo(projectviewPageDisplayName);
                     navigationController.navigateTo(projectviewPageRoute);
                   },
-                  child: const Text("PROJEKTE"),
+                  child: Text("NAV_PROJECTS".tr.toUpperCase()),
                   style: ElevatedButton.styleFrom(
                     primary: myAccent,
                   ),
@@ -38,16 +39,14 @@ class WelcomeText extends StatelessWidget {
                   menuController.changeActiveItemTo(contactviewPageDisplayName);
                   navigationController.navigateTo(contactviewPageRoute);
                 },
-                child: const Text("KONTAKT"),
+                child: Text("NAV_CONTACT".tr.toUpperCase()),
                 style: OutlinedButton.styleFrom(
                   primary: myAccent,
                 ),
               )
             ],
           ),
-          const CustomText(
-              text:
-                  "Ich bin ein Textabschnitt. Klicken Sie hier, um einen Text hinzuzufügen und mich zu bearbeiten. Klicken Sie auf Text bearbeiten oder doppelklicken Sie, um loszulegen. Dies ist der ideale Ort, um einen langen Text über Ihr Unternehmen zu schreiben."),
+          CustomText(text: "HOME_DESCRIPTION".tr)
         ],
       ),
     );

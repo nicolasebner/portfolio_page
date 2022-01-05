@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/email_service.dart';
+import 'package:get/get.dart';
+import 'package:portfolio_website/widgets/custom_text.dart';
 
 class ContactForm extends StatefulWidget {
   const ContactForm({Key? key}) : super(key: key);
@@ -18,19 +20,19 @@ class _ContactFormState extends State<ContactForm> {
   var messageValue = "";
 
   Color buttonColor = myAccent;
-  Widget buttonChild = const Text("Nachricht abschicken");
+  Widget buttonChild = Text("CONTACT_SEND".tr);
 
   _onSendRespons(res) {
     if (res.statusCode == 200) {
       _formKey.currentState?.reset();
       setState(() {
         buttonColor = Colors.green;
-        buttonChild = const Text("Erfolgreich Gesendet!");
+        buttonChild = Text("CONTACT_SEND_SUCCESS".tr);
       });
     } else {
       setState(() {
         buttonColor = Colors.red;
-        buttonChild = const Text("Das hat leider nicht geklappt!");
+        buttonChild = Text("CONTACT_SEND_FAIL".tr);
       });
     }
   }
@@ -47,49 +49,49 @@ class _ContactFormState extends State<ContactForm> {
             child: TextFormField(
                 validator: (val) {
                   if (val == null || val.isEmpty) {
-                    return "Name ist ein Pflichtfeld";
+                    return "CONTACT_NAME_MANDATORY".tr;
                   }
                 },
                 onSaved: (val) => nameValue = val.toString(),
-                decoration: _inputFieldDeco("Name")),
+                decoration: _inputFieldDeco("CONTACT_NAME".tr)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
                 validator: (val) {
                   if (val == null || val.isEmpty) {
-                    return "E-Mail ist ein Pflichtfeld";
+                    return "CONTACT_EMAIL_MANDATORY".tr;
                   }
                   if (!RegExp(r"^\S+@\S+\.\S+$").hasMatch(val)) {
-                    return "Das ist keine E-Mail ;)";
+                    return "CONTACT_EMAIL_NO_MAIL".tr;
                   }
                 },
                 onSaved: (val) => emailValue = val.toString(),
-                decoration: _inputFieldDeco("E-Mail")),
+                decoration: _inputFieldDeco("CONTACT_EMAIL".tr)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
                 validator: (val) {
                   if (val == null || val.isEmpty) {
-                    return "Betreff ist ein Pflichtfeld";
+                    return "CONTACT_SUBJECT_MANDATORY".tr;
                   }
                 },
                 onSaved: (val) => subjectValue = val.toString(),
-                decoration: _inputFieldDeco("Betreff")),
+                decoration: _inputFieldDeco("CONTACT_SUBJECT".tr)),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
                 validator: (val) {
                   if (val == null || val.isEmpty) {
-                    return "Nachricht ist ein Pflichtfeld";
+                    return "CONTACT_MESSAGE_MANDATORY".tr;
                   }
                 },
                 keyboardType: TextInputType.multiline,
                 maxLines: 8,
                 onSaved: (val) => messageValue = val.toString(),
-                decoration: _inputFieldDeco("Nachricht")),
+                decoration: _inputFieldDeco("CONTACT_MESSAGE".tr)),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0),

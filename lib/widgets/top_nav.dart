@@ -7,6 +7,8 @@ import 'package:portfolio_website/routing/routes.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
 import 'package:portfolio_website/widgets/navigation_item.dart';
 
+import 'language_switcher.dart';
+
 AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) {
   return AppBar(
     leading: !ResponsiveWidget.isSmallScreen(context)
@@ -31,12 +33,13 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) {
         const CustomTextHeading(text: "Nicolas Ebner"),
         Visibility(
             visible: !ResponsiveWidget.isSmallerThanLargeScreen(context),
-            child: const CustomText(text: " | Junior Softwareentwickler")),
+            child: CustomText(text: " | " + "NAV_DEVELOPER".tr)),
         const Spacer(),
         Visibility(
           visible: !ResponsiveWidget.isSmallScreen(context),
           child: const NavigationBarItems(),
         ),
+        const LanguageSwitcher(),
       ],
     ),
     elevation: 0,

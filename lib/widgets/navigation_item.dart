@@ -33,7 +33,7 @@ class NavigationItem extends StatelessWidget {
           ),
           child: Column(
             children: [
-              CustomText(text: itemName),
+              CustomText(text: itemName.tr),
               Visibility(
                   visible: menuController.isHovering(itemName) ||
                       menuController.isActive(itemName),

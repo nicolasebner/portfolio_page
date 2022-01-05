@@ -4,6 +4,8 @@ import 'package:portfolio_website/pages/contact/widgets/contact_form.dart';
 import 'package:portfolio_website/widgets/contact_row.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
 
+import 'package:get/get.dart';
+
 class ContactViewPage extends StatelessWidget {
   const ContactViewPage({Key? key}) : super(key: key);
 
@@ -37,7 +39,7 @@ class ContactViewPage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   CustomText(
-                    text: "Kontakt",
+                    text: "NAV_CONTACT".tr,
                     size: 22,
                   ),
                   Padding(
@@ -45,7 +47,7 @@ class ContactViewPage extends StatelessWidget {
                         vertical: 12.0, horizontal: 200),
                     child: ContactRow(),
                   ),
-                  CustomText(text: "oder"),
+                  CustomText(text: "OR".tr),
                   ContactForm(),
                 ],
               ),

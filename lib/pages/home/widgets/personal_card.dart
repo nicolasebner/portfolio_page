@@ -3,6 +3,7 @@ import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 import 'package:portfolio_website/widgets/contact_row.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
+import 'package:get/get.dart';
 
 class PersonalCard extends StatelessWidget {
   const PersonalCard({
@@ -58,8 +59,8 @@ class PersonalCard extends StatelessWidget {
             color: myAccent,
           ),
           const Spacer(),
-          const CustomText(
-            text: "Junior Softwareentwickler",
+          CustomText(
+            text: "NAV_DEVELOPER".tr,
             size: 22,
           ),
           const Spacer(),

@@ -5,6 +5,7 @@ import 'package:portfolio_website/helpers/internet_service.dart';
 import 'package:portfolio_website/pages/projects/widgets/project_card.dart';
 import 'package:portfolio_website/pages/projects/widgets/text_divider.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
+import 'package:get/get.dart';
 
 class ProjectViewPage extends StatelessWidget {
   const ProjectViewPage({Key? key}) : super(key: key);
@@ -22,9 +23,9 @@ class ProjectViewPage extends StatelessWidget {
         children: [
           Center(
             child: Padding(
-              padding: EdgeInsets.only(left: 8, top: 80, bottom: 34),
+              padding: const EdgeInsets.only(left: 8, top: 80, bottom: 34),
               child: CustomText(
-                text: "👨🏽‍💻-Projekte, an denen ich gearbeitet habe",
+                text: "PROJECTS_TITLE".tr,
                 size: 32,
                 weigth: FontWeight.bold,
               ),
@@ -32,131 +33,132 @@ class ProjectViewPage extends StatelessWidget {
           ),
           TextDivider(
             number: "01.",
-            text: "als Werksstudent",
+            text: "PROJECTS_WORKING_STUDENT".tr,
           ),
           ProjectCard(
             imageRoute: "tech11.jpg",
-            title: "tech11 Core Insurance Platform",
-            accentText: "Frontend Entwickler",
-            usedTech:
-                "JavaScript, ES6 WebComponents, Unit Tests, REST, UI/UX für B2B",
-            description:
-                "Die tech11 entwickelt eine Core Insurance Platform. Ich habe dort als Entwickler das internationale Frontend-Team unterstützt und ggf. auch die Moderation kleinerer Meetings übernommen. Zwei größere Aufgaben unter meiner Verantwortung war die Implementierung des Release-Managements und des E-Mail Services in der Platform.",
+            title: "PROJECTS_TECH11_TITLE".tr,
+            accentText: "PROJECTS_TECH11_ACCENT".tr,
+            usedTech: "PROJECTS_TECH11_TECH".tr,
+            description: "PROJECTS_TECH11_DESCRIPTION".tr,
             alignLeft: false,
             height: 310,
           ),
 
-          // UNI PROJETKE
-          TextDivider(number: "02.", text: "an der Universität"),
-          ProjectCard(
-            imageRoute: "bachelorarbeit_screen.jpg",
-            title: "Trade-off bei Differential Privacy und Effektivität",
-            accentText: "Bacherlorarbeit",
-            usedTech: "Java",
-            descriptionChild: Padding(
-              padding: const EdgeInsets.only(top: 8.0),
-              child: ElevatedButton.icon(
-                onPressed: () => openWeb(
-                    "https://www.github.com/nicolasebner/bachelorarbeit"),
-                icon: FaIcon(
-                  FontAwesomeIcons.github,
-                  size: 16,
+          Container(
+            color: Colors.white,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // UNI PROJETKE
+                TextDivider(number: "02.", text: "PROJECTS_AT_UNIVERSITY".tr),
+                ProjectCard(
+                  imageRoute: "bachelorarbeit_screen.jpg",
+                  title: "PROJECTS_BA_TITLE".tr,
+                  accentText: "PROJECTS_BA_ACCENT".tr,
+                  usedTech: "PROJECTS_BA_TECH".tr,
+                  description: "PROJECTS_BA_DESCRIPTION".tr,
+                  alignLeft: true,
+                  height: 340,
+                  descriptionChild: Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: ElevatedButton.icon(
+                      onPressed: () => openWeb(
+                          "https://www.github.com/nicolasebner/bachelorarbeit"),
+                      icon: const FaIcon(
+                        FontAwesomeIcons.github,
+                        size: 16,
+                      ),
+                      // icon: const Icon(Icons.g_mobiledata),
+                      label: const Text("Github"),
+                    ),
+                  ),
                 ),
-                // icon: const Icon(Icons.g_mobiledata),
-                label: const Text("Github"),
-              ),
+                const SizedBox(
+                  height: 80,
+                ),
+                ProjectCard(
+                  imageRoute: "awe.jpg",
+                  title: "PROJECTS_AWE_TITLE".tr,
+                  accentText: "PROJECTS_AWE_ACCENT".tr,
+                  usedTech: "PROJECTS_AWE_TECH".tr,
+                  description: "PROJECTS_AWE_DESCRIPTION".tr,
+                  alignLeft: false,
+                  height: 300,
+                ),
+                const SizedBox(
+                  height: 80,
+                ),
+                ProjectCard(
+                  imageRoute: "awe.jpg",
+                  title: "PROJECTS_EPP_TITLE".tr,
+                  accentText: "PROJECTS_EPP_ACCENT".tr,
+                  usedTech: "PROJECTS_EPP_TECH".tr,
+                  description: "PROJECTS_EPP_DESCRIPTION".tr,
+                  alignLeft: true,
+                  height: 280,
+                ),
+              ],
             ),
-            description:
-                "Wir haben einen Programmexecuter für die OokOok Programmiersprache (ähnlich zu Brainfuq) inklusive Compiler geschrieben. Desweiteren haben wir ein Consolen TicTacToe Spiel mit Computer- und Netzwerkübergreifenden Spielen erstellt.",
-            alignLeft: true,
           ),
-          SizedBox(
-            height: 80,
-          ),
-          ProjectCard(
-            imageRoute: "awe.jpg",
-            title: "Advanced Web Engineering",
-            accentText: "Uni Fach",
-            usedTech: ".NET Core 5, C++, HTML, CSS, SQL, Bootstrap",
-            description:
-                "In Gruppenarbeit haben wir eine Webseite zum Verwalten von Thesen/-themen für Lehrstühle entwickelt. Meine Aufgaben waren die Authentifizierung der Nutzer, das Zusammenspiel der Datenbank und des Interfaces und ich war Hauptverantwortlich für das Frontend. Note: 1.0",
-            alignLeft: false,
-            height: 300,
-          ),
-          SizedBox(
-            height: 80,
-          ),
-          ProjectCard(
-            imageRoute: "awe.jpg",
-            title: "Programmierpraktikum",
-            accentText: "Uni Fach",
-            usedTech: "Java",
-            description:
-                "Wir haben einen Programmexecuter für die OokOok Programmiersprache (ähnlich zu Brainfuq) inklusive Compiler geschrieben. Desweiteren haben wir ein Consolen TicTacToe Spiel mit Computer- und Netzwerkübergreifenden Spielen erstellt.",
-            alignLeft: true,
-            height: 280,
-          ),
-
           // PRIVATE PROJEKTE
-          TextDivider(number: "03.", text: "Privat"),
+          TextDivider(number: "03.", text: "PROJECTS_PRIVAT".tr),
           ProjectCard(
             imageRoute: "pomodoro.jpg",
-            title: "Simply Pomodoro",
-            accentText: "Cross-Plattform Mobile-App",
-            usedTech: "Flutter/Dart, Firebase, ",
-            description:
-                "Die Pomodoro-Technik ist eine Methode des Zeitmanagements und gibt eine Struktur für Arbeits- und Pausen-Abschnitte. Dieser Timer hilft diese Methode besser durchzuführen.",
+            title: "PROJECTS_POMODORO_TITLE".tr,
+            accentText: "PROJECTS_POMODORO_ACCENT".tr,
+            usedTech: "PROJECTS_POMODORO_TECH".tr,
+            description: "PROJECTS_POMODORO_DESCRIPTION".tr,
             alignLeft: false,
             height: 280,
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
           ProjectCard(
             imageRoute: "beerpong.jpg",
-            title: "LogPong",
-            accentText: "Cross-Plattform Mobile-App",
-            usedTech: "Flutter/Dart, Firebase, ",
-            description:
-                "Eine App in der man die Ergebnisse von BeerPong Spielen eintragen kann um im Anschluss einen Überblick über die Performance aller Spieler haben zu können.",
+            title: "PROJECTS_BEERPONG_TITLE".tr,
+            accentText: "PROJECTS_BEERPONG_ACCENT".tr,
+            usedTech: "PROJECTS_BEERPONG_TECH".tr,
+            description: "PROJECTS_BEERPONG_DESCRIPTION".tr,
             alignLeft: true,
             height: 280,
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
 
           ProjectCard(
             imageRoute: "quicktype_edited.jpg",
-            title: "QuickType",
-            accentText: "Webseite",
-            usedTech: "Javascript, Html, CSS",
-            description:
-                "Eine einfache Webseite, auf der man seine Tippgeschwindigkeit messen kann, nicht mehr aber auch nicht weniger.",
+            title: "PROJECTS_QUICKTYPE_TITLE".tr,
+            accentText: "PROJECTS_QUICKTYPE_ACCENT".tr,
+            usedTech: "PROJECTS_QUICKTYPE_TECH".tr,
+            description: "PROJECTS_QUICKTYPE_DESCRIPTION".tr,
             descriptionChild: Padding(
               padding: const EdgeInsets.only(top: 8.0),
               child: OutlinedButton(
-                  onPressed: () => openWeb(
-                      "https://nicolasebner.github.io/quicktype.github.io/"),
-                  child: const Text("Probier es aus!")),
+                onPressed: () => openWeb(
+                    "https://nicolasebner.github.io/quicktype.github.io/"),
+                child: Text("PROJECTS_QUICKTYPE_TRY_IT".tr),
+              ),
             ),
             alignLeft: false,
             height: 280,
           ),
 
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
           ProjectCard(
             imageRoute: "awe.jpg",
-            title: "Udemy Kurse",
-            accentText: "Always Keep Learning",
-            usedTech: "Flutter/Dart, Firebase, ",
-            description: "Des Weiteren habe ich einige ",
+            title: "PROJECTS_UDEMY_TITLE".tr,
+            accentText: "PROJECTS_UDEMY_ACCENT".tr,
+            usedTech: "PROJECTS_UDEMY_TECH".tr,
+            description: "PROJECTS_UDEMY_DESCRIPTION".tr,
             alignLeft: true,
             height: 280,
           ),
-          SizedBox(
+          const SizedBox(
             height: 80,
           ),
           // ProjectCard(
