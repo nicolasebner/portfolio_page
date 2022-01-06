@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/constants/filters.dart';
+import 'package:portfolio_website/helpers/responsiveness.dart';
 
 class ProjectImage extends StatefulWidget {
   const ProjectImage({
@@ -18,6 +19,14 @@ class ProjectImage extends StatefulWidget {
 class _ProjectImageState extends State<ProjectImage> {
   bool _hover = false;
 
+  double _imageWidth(context) {
+    if (ResponsiveWidget.isSmallerThanLargeScreen(context)) {
+      return _hover ? 320 : 300;
+    } else {
+      return _hover ? 420 : 400;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -28,12 +37,11 @@ class _ProjectImageState extends State<ProjectImage> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 100),
         height: _hover ? widget.height - 20 : widget.height - 30,
-        width: _hover ? 420 : 400,
-        // color: _hover ? Colors.green : Colors.blue,
+        width: _imageWidth(context),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8.0),
           image: DecorationImage(
-            fit: BoxFit.cover,
+            fit: BoxFit.fitHeight,
             image: AssetImage(
               widget.imageRoute,
             ),

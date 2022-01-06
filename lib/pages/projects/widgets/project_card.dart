@@ -14,6 +14,7 @@ class ProjectCard extends StatelessWidget {
   final String description;
   final String usedTech;
   final Widget descriptionChild;
+  final bool bigDescription;
 
   const ProjectCard({
     Key? key,
@@ -25,6 +26,7 @@ class ProjectCard extends StatelessWidget {
     required this.description,
     this.usedTech = "",
     this.descriptionChild = const SizedBox(),
+    this.bigDescription = false,
   }) : super(key: key);
 
   @override
@@ -32,12 +34,27 @@ class ProjectCard extends StatelessWidget {
     final widthOfCard = ResponsiveWidget.isLargeScreen(context)
         ? 800.0
         : ResponsiveWidget.isMediumScreen(context)
-            ? 600.0
-            : 400.0;
+            ? 800.0
+            : 600.0;
 
-    return SizedBox(
-      height: height,
-      width: widthOfCard,
+    return Container(
+      padding: EdgeInsets.all(20),
+      height: height + 40,
+      width: (widthOfCard),
+      decoration: BoxDecoration(
+        color: myligth,
+        borderRadius: BorderRadius.all(
+          Radius.circular(20),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
       child: Stack(
         children: [
           Positioned(
@@ -66,13 +83,13 @@ class ProjectCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 80,
+            top: 82,
             right: alignLeft ? null : 0,
             child: Container(
               margin: const EdgeInsets.symmetric(horizontal: 16),
               padding: const EdgeInsets.all(16),
-              color: myligth,
-              width: widthOfCard * 0.55,
+              color: Colors.grey[100],
+              width: bigDescription ? widthOfCard * 0.70 : widthOfCard * 0.55,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

@@ -9,6 +9,9 @@ const projectviewPageDisplayName = "NAV_PROJECTS";
 const contactviewPageRoute = "/contact";
 const contactviewPageDisplayName = "NAV_CONTACT";
 
+const smallScreenNotYetPageRoute = "/small";
+const smallScreenNotYetPageDisplayName = "SMALL";
+
 class MenuItem {
   final String name;
   final String route;

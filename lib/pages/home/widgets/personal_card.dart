@@ -13,7 +13,7 @@ class PersonalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: ResponsiveWidget.isSmallerThanLargeScreen(context) ? 250 : 350,
+      width: ResponsiveWidget.isSmallerThanLargeScreen(context) ? 280 : 350,
       height: 520,
       decoration: BoxDecoration(
         color: myligth,

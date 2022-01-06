@@ -15,19 +15,19 @@ class ContactRow extends StatelessWidget {
         IconButton(
             onPressed: () =>
                 openWeb("https://www.linkedin.com/in/nicolas-ebner/"),
-            icon: FaIcon(FontAwesomeIcons.linkedinIn)),
+            icon: const FaIcon(FontAwesomeIcons.linkedinIn)),
         IconButton(
             onPressed: () =>
                 openWeb("https://www.xing.com/profile/Nicolas_Ebner4/cv"),
-            icon: FaIcon(FontAwesomeIcons.xing)),
+            icon: const FaIcon(FontAwesomeIcons.xing)),
         IconButton(
             onPressed: () =>
                 openWeb("https://www.instagram.com/nicolas_ebner/"),
-            icon: FaIcon(FontAwesomeIcons.instagram)),
+            icon: const FaIcon(FontAwesomeIcons.instagram)),
         IconButton(
             onPressed: () =>
                 openWeb("https://www.facebook.com/nicolas.ebner.9/"),
-            icon: FaIcon(FontAwesomeIcons.facebook)),
+            icon: const FaIcon(FontAwesomeIcons.facebook)),
       ],
     );
   }

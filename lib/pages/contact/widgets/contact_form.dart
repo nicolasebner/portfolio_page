@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/email_service.dart';
 import 'package:get/get.dart';
-import 'package:portfolio_website/widgets/custom_text.dart';
 
 class ContactForm extends StatefulWidget {
   const ContactForm({Key? key}) : super(key: key);

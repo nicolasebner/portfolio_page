@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portfolio_website/constants/controllers.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 import 'package:portfolio_website/routing/routes.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
+import 'package:portfolio_website/widgets/leading_icon.dart';
 import 'package:portfolio_website/widgets/navigation_item.dart';
 
 import 'language_switcher.dart';
 
 AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) {
   return AppBar(
-    leading: !ResponsiveWidget.isSmallScreen(context)
-        ? Padding(
-            padding: const EdgeInsets.only(left: 14.0),
-            child: Icon(
-              Icons.accessibility_new_rounded,
-              color: myAccent,
-            ),
-          )
-        : IconButton(
-            onPressed: () {
-              key.currentState?.openDrawer();
-            },
-            icon: Icon(
-              Icons.menu,
-              color: myAccent,
-            ),
-          ),
+    leading:
+        // !ResponsiveWidget.isSmallScreen(context)?
+        const Padding(
+      padding: EdgeInsets.only(left: 22.0),
+      child: LeadingIcon(),
+    ),
+    // : IconButton(
+    //     onPressed: () {
+    //       key.currentState?.openDrawer();
+    //     },
+    //     icon: Icon(
+    //       Icons.menu,
+    //       color: myAccent,
+    //     ),
+    //   ),
     title: Row(
       children: [
         const CustomTextHeading(text: "Nicolas Ebner"),

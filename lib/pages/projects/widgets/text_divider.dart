@@ -15,7 +15,7 @@ class TextDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 50),
+      padding: const EdgeInsets.only(left: 8.0, bottom: 50, top: 100),
       child: Row(
         children: [
           CustomText(
@@ -28,13 +28,13 @@ class TextDivider extends StatelessWidget {
           ),
           CustomText(
             text: text,
-            size: 26,
+            size: 30,
             weigth: FontWeight.bold,
           ),
           Container(
             margin: const EdgeInsets.only(left: 16),
             height: 1,
-            width: 250,
+            width: 280,
             color: myAccent,
           ),
         ],

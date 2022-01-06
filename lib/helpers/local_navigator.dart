@@ -8,3 +8,9 @@ Navigator localNavigator() => Navigator(
       initialRoute: homeviewPageRoute,
       onGenerateRoute: generateRoute,
     );
+
+Navigator localSmallNavigator() => Navigator(
+      key: navigationController.navigationKey,
+      initialRoute: smallScreenNotYetPageRoute,
+      onGenerateRoute: generateRoute,
+    );
