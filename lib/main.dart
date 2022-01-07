@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       translations: Messages(),
-      locale: Get.deviceLocale,
+      locale: const Locale("de", "DE"),
       fallbackLocale: const Locale("de", "DE"),
       initialRoute: homeviewPageRoute,
       unknownRoute: GetPage(
