@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_website/controllers/accent_color_controller.dart';
 import 'package:portfolio_website/controllers/menu_controller.dart';
 import 'package:portfolio_website/controllers/navigation_controller.dart';
 import 'package:portfolio_website/helpers/messages.dart';
@@ -12,6 +13,7 @@ import 'package:portfolio_website/routing/routes.dart';
 void main() {
   Get.put(MenuController());
   Get.put(NavigationController());
+  Get.put(MyAccentController());
 
   runApp(const MyApp());
 }

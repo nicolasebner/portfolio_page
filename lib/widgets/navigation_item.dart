@@ -27,9 +27,6 @@ class NavigationItem extends StatelessWidget {
             color: menuController.isHovering(itemName)
                 ? myligthDark.withOpacity(.1)
                 : Colors.transparent,
-
-            // TODO Warum Funktioniert der Radius nicht?
-            // borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
           child: Column(
             children: [

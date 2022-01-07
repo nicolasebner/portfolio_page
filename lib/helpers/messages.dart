@@ -8,13 +8,13 @@ class Messages extends Translations {
           "HOME_HELLO_CAPTION":
               "ich bin Student der Wirtschaftsinformatik und Softwareentwickler",
           "HOME_DESCRIPTION":
-              "Dem Studiengang entsprechend liegen meine Interessen in den Bereichen der Wirtschaft und der Informatik, *wobei die Informatik mich mehr begeistert*. Nach Tätigkeit als Werksstudent in einem aufstrebenden Start-Up möchte ich nun Erfahrung in einem *etablierten Unternehmen* sammeln.",
+              "Dem Studiengang entsprechend liegen meine Interessen in den Bereichen Wirtschaft und Informatik, *wobei die Informatik mich mehr begeistert*. Nach meiner Tätigkeit als Werkstudent in einem aufstrebenden Start-Up möchte ich nun Erfahrungen in einem *etablierten Unternehmen* sammeln.",
           "NAV_HOME": "Home",
           "NAV_PROJECTS": "Projekte",
           "NAV_CONTACT": "Kontakt",
           "NAV_DEVELOPER": "Junior Softwareentwickler",
-          "PROJECTS_TITLE": "👨🏽‍💻-Projekte, an denen ich gearbeitet habe",
-          "PROJECTS_WORKING_STUDENT": "als Werksstudent",
+          "PROJECTS_TITLE": "👨🏽‍💻-Projekte, an welchen ich gearbeitet habe",
+          "PROJECTS_WORKING_STUDENT": "als Werkstudent",
           "PROJECTS_TECH11_ACCENT": "Frontend Entwickler",
           "PROJECTS_TECH11_TITLE": "tech11 Core Insurance Platform",
           "PROJECTS_TECH11_DESCRIPTION":
@@ -28,25 +28,25 @@ class Messages extends Translations {
           "PROJECTS_BA_TITLE_SHORT":
               "Der Trade-off zwischen Differential Privacy\nund Effektivität",
           "PROJECTS_BA_DESCRIPTION":
-              "*Differential Privacy* ist eine neuartige Methode um die Privatsphäre beim *Machine Learning* durch Zufall zu schützen. In dieser Arbeit habe ich *synthetische Daten mittels eines GAN's* erstellt, welche Differential Privacy in verschiedenen Stärken unterstützen. Im Anschluss habe ich die *Effektivität dieser verglichen*.\n*Note: 1.7*",
+              "*Differential Privacy* ist eine neuartige Methode um die Privatsphäre beim *Machine Learning* durch Zufall zu schützen. In dieser Arbeit habe ich *synthetische Daten mittels eines GAN's* erstellt, welche Differential Privacy in verschiedenen Stärken unterstützen. Im Anschluss habe ich die *Effektivität dieser verglichen und bewertet*.\n*Note: 1.7*",
           "PROJECTS_BA_TECH":
               "Python, Data Science, GAN's, Differential Privacy",
           "PROJECTS_AWE_ACCENT": "Uni Fach",
           "PROJECTS_AWE_TITLE": "Advanced Web Engineering",
           "PROJECTS_AWE_DESCRIPTION":
-              "In Gruppenarbeit haben wir eine *Webseite zum Verwalten von Thesen/-themen für Lehrstühle* entwickelt. Meine Aufgaben waren die *Authentifizierung* der Nutzer, das *Zusammenspiel der Datenbank und des Interfaces* und ich war Hauptverantwortlich für das *Frontend*. \n*Note: 1.0*",
+              "In Gruppenarbeit haben wir eine *Webseite zum Verwalten von Thesen/-themen für Lehrstühle* entwickelt. Meine Aufgaben waren die *Authentifizierung* der Nutzer sowie das *Zusammenspiel der Datenbank und des Interfaces*. Zudem war ich Hauptverantwortlicher für das *Frontend*. \n*Note: 1.0*",
           "PROJECTS_AWE_TECH": ".NET Core 5, C++, HTML, CSS, SQL, Bootstrap",
           "PROJECTS_EPP_ACCENT": "Uni Fach",
           "PROJECTS_EPP_TITLE": "Programmierpraktikum",
           "PROJECTS_EPP_DESCRIPTION":
-              "Das Praktikum bestand aus *drei Aufgaben*. Als erstes haben wir eine Anwendung inklusive Parser, Interpreter und Executer entwickelt, welche *Ook-Programme* (ähnlich zu Brainfuck) ausführen kann. Die zweite Aufgabe war ein *Feiertagskalender* und die dritte ein netzwerkübergreifendes *TicTacToe-Spiel*.",
+              "Das Praktikum bestand aus *drei Aufgaben*. Als erstes haben wir eine Anwendung inklusive Parser, Interpreter und Executer entwickelt, welche *Ook-Programme* (ähnlich zu Brainfuck) ausführen kann. Die zweite Aufgabe war ein *Feiertagskalender* und die Dritte ein netzwerkübergreifendes *TicTacToe-Spiel*.",
           "PROJECTS_EPP_TECH":
               "Java, Objektorientierte Programmierung, Vererbung, Polymorphie",
           "PROJECTS_PRIVAT": "Privat",
           "PROJECTS_BEERPONG_ACCENT": "Cross-Plattform Mobile-App",
           "PROJECTS_BEERPONG_TITLE": "LogPong",
           "PROJECTS_BEERPONG_DESCRIPTION":
-              "Eine App mit *User-Authentifizierung* und *Realtime-Database*, in der man die Ergebnisse von *BeerPong-Spielen* eintragen kann, um im Anschluss einen *Überblick über die letzten Spiele und die Performance aller Spieler* zu haben.",
+              "Eine App mit *User-Authentifizierung* und *Realtime-Database*, in der man die Ergebnisse von *BeerPong-Spielen* eintragen kann, um im Anschluss einen *Überblick über die letzten Spiele und die Performance aller Spieler* zu erhalten.",
           "PROJECTS_BEERPONG_TECH":
               "Flutter/Dart, Firebase, Cloud-Firestore, Realtime-Database, UI-Design",
           "PROJECTS_QUICKTYPE_ACCENT": "Webseite",
@@ -86,7 +86,7 @@ class Messages extends Translations {
           "HOME_HELLO_CAPTION":
               "I am a student of business and computer science and software developer",
           "HOME_DESCRIPTION":
-              "According to my studies, my interests are in the fields of business and computer science. *Whereby computer science inspires me more*. After working as a student trainee in an up-and-coming start-up, I would now like to gain experience in an *established company*.",
+              "According to my studies, my interests are in the fields of business and computer science. *Whereby computer science inspires me more*. After working as a working student in an up-and-coming start-up, I would now like to gain experience in an *established company*.",
           "NAV_HOME": "Home",
           "NAV_PROJECTS": "Projects",
           "NAV_CONTACT": "Contact",
@@ -106,7 +106,7 @@ class Messages extends Translations {
           "PROJECTS_BA_TITLE_SHORT":
               "the trade-off between differential privacy\nand effectiveness",
           "PROJECTS_BA_DESCRIPTION":
-              "*Differential Privacy* is a new method to protect privacy in *machine learning* by randomness. In this work, I created *synthetic data using GAN's* that support Differential Privacy in various strengths. Subsequently, I have compared the *effectiveness of these*.\n*grade: 1.7 (A-)*",
+              "*Differential Privacy* is a new method to protect privacy in *machine learning* by randomness. In this work, I created *synthetic data using GAN's* that support Differential Privacy in various strengths. Subsequently, I compared and evaluated the *effectiveness of these*.\n*grade: 1.7 (A-)*",
           "PROJECTS_BA_TECH":
               "Python, Data Science, GAN's, Differential Privacy",
           "PROJECTS_AWE_ACCENT": "Uni subject",

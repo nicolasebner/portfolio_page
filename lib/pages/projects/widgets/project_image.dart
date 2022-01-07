@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/constants/filters.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 
 class ProjectImage extends StatefulWidget {
@@ -47,7 +46,7 @@ class _ProjectImageState extends State<ProjectImage> {
             ),
             colorFilter: _hover
                 ? null
-                : ColorFilter.mode(Colors.grey, BlendMode.modulate),
+                : const ColorFilter.mode(Colors.grey, BlendMode.modulate),
           ),
         ),
       ),

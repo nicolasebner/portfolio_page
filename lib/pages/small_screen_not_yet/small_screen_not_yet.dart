@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/pages/home/widgets/personal_card.dart';
-import 'package:portfolio_website/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
 class SmallScreenNotYet extends StatelessWidget {

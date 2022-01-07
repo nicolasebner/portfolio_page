@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:portfolio_website/routing/routes.dart';
-import 'package:portfolio_website/widgets/custom_text.dart';
 
 class MenuController extends GetxController {
   static MenuController instace = Get.find();

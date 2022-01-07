@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/constants/controllers.dart';
-import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 import 'package:portfolio_website/routing/routes.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';
@@ -21,27 +20,33 @@ class WelcomeText extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 22),
-                child: ElevatedButton(
-                  onPressed: () {
-                    menuController
-                        .changeActiveItemTo(projectviewPageDisplayName);
-                    navigationController.navigateTo(projectviewPageRoute);
-                  },
-                  child: Text("NAV_PROJECTS".tr.toUpperCase()),
-                  style: ElevatedButton.styleFrom(
-                    primary: myAccent,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12.0, vertical: 22),
+                child: Obx(
+                  () => ElevatedButton(
+                    onPressed: () {
+                      menuController
+                          .changeActiveItemTo(projectviewPageDisplayName);
+                      navigationController.navigateTo(projectviewPageRoute);
+                    },
+                    child: Text("NAV_PROJECTS".tr.toUpperCase()),
+                    style: ElevatedButton.styleFrom(
+                      primary: myAccentController.myAccentColor,
+                    ),
                   ),
                 ),
               ),
-              OutlinedButton(
-                onPressed: () {
-                  menuController.changeActiveItemTo(contactviewPageDisplayName);
-                  navigationController.navigateTo(contactviewPageRoute);
-                },
-                child: Text("NAV_CONTACT".tr.toUpperCase()),
-                style: OutlinedButton.styleFrom(
-                  primary: myAccent,
+              Obx(
+                () => OutlinedButton(
+                  onPressed: () {
+                    menuController
+                        .changeActiveItemTo(contactviewPageDisplayName);
+                    navigationController.navigateTo(contactviewPageRoute);
+                  },
+                  child: Text("NAV_CONTACT".tr.toUpperCase()),
+                  style: OutlinedButton.styleFrom(
+                    primary: myAccentController.myAccentColor,
+                  ),
                 ),
               )
             ],

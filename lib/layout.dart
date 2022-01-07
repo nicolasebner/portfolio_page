@@ -7,6 +7,8 @@ import 'package:portfolio_website/widgets/top_nav.dart';
 class SiteLayout extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
+  SiteLayout({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

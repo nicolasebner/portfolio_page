@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:portfolio_website/constants/controllers.dart';
-import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 import 'package:portfolio_website/routing/routes.dart';
 import 'package:portfolio_website/widgets/custom_text.dart';

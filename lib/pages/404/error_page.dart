@@ -6,7 +6,7 @@ class PageNotFound extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: CustomText(
         text: "Sorry you reached a site, which is not available",
         size: 32,

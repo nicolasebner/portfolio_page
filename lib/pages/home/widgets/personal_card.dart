@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_website/constants/controllers.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 import 'package:portfolio_website/widgets/contact_row.dart';
@@ -17,7 +18,7 @@ class PersonalCard extends StatelessWidget {
       height: 520,
       decoration: BoxDecoration(
         color: myligth,
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
         boxShadow: [
@@ -25,7 +26,7 @@ class PersonalCard extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3), // changes position of shadow
+            offset: const Offset(0, 3), // changes position of shadow
           ),
         ],
       ),
@@ -36,7 +37,7 @@ class PersonalCard extends StatelessWidget {
           Stack(
             alignment: Alignment.center,
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 backgroundColor: Colors.grey,
                 radius: 120,
               ),
@@ -53,10 +54,12 @@ class PersonalCard extends StatelessWidget {
             size: 26,
           ),
           const Spacer(),
-          Container(
-            height: 2,
-            width: 40,
-            color: myAccent,
+          Obx(
+            () => Container(
+              height: 2,
+              width: 40,
+              color: myAccentController.myAccentColor,
+            ),
           ),
           const Spacer(),
           CustomText(
@@ -72,7 +75,7 @@ class PersonalCard extends StatelessWidget {
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20)),
             ),
-            child: Padding(
+            child: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 32),
               child: ContactRow(),
             ),

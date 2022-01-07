@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio_website/constants/controllers.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/internet_service.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
@@ -62,15 +63,18 @@ class ProjectViewPage extends StatelessWidget {
             height: 340,
             descriptionChild: Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: ElevatedButton.icon(
-                onPressed: () => openWeb(
-                    "https://www.github.com/nicolasebner/bachelorarbeit"),
-                icon: const FaIcon(
-                  FontAwesomeIcons.github,
-                  size: 16,
+              child: Obx(
+                () => ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      primary: myAccentController.myAccentColor),
+                  onPressed: () => openWeb(
+                      "https://www.github.com/nicolasebner/bachelorarbeit"),
+                  icon: const FaIcon(
+                    FontAwesomeIcons.github,
+                    size: 16,
+                  ),
+                  label: const Text("Github"),
                 ),
-                // icon: const Icon(Icons.g_mobiledata),
-                label: const Text("Github"),
               ),
             ),
           ),
@@ -84,7 +88,7 @@ class ProjectViewPage extends StatelessWidget {
             usedTech: "PROJECTS_AWE_TECH".tr,
             description: "PROJECTS_AWE_DESCRIPTION".tr,
             alignLeft: false,
-            height: 300,
+            height: 318,
           ),
           const SizedBox(
             height: 40,
@@ -121,10 +125,14 @@ class ProjectViewPage extends StatelessWidget {
             description: "PROJECTS_QUICKTYPE_DESCRIPTION".tr,
             descriptionChild: Padding(
               padding: const EdgeInsets.only(top: 8.0),
-              child: ElevatedButton(
-                onPressed: () => openWeb(
-                    "https://nicolasebner.github.io/quicktype.github.io/"),
-                child: Text("PROJECTS_QUICKTYPE_TRY_IT".tr),
+              child: Obx(
+                () => ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: myAccentController.myAccentColor),
+                  onPressed: () => openWeb(
+                      "https://nicolasebner.github.io/quicktype.github.io/"),
+                  child: Text("PROJECTS_QUICKTYPE_TRY_IT".tr),
+                ),
               ),
             ),
             alignLeft: false,

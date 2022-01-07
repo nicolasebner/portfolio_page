@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/constants/filters.dart';
+import 'package:get/get.dart';
+import 'package:portfolio_website/constants/controllers.dart';
 import 'package:portfolio_website/constants/style.dart';
 import 'package:portfolio_website/helpers/responsiveness.dart';
 import 'package:portfolio_website/pages/projects/widgets/project_image.dart';
@@ -38,12 +39,12 @@ class ProjectCard extends StatelessWidget {
             : 600.0;
 
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       height: height + 40,
       width: (widthOfCard),
       decoration: BoxDecoration(
         color: myligth,
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
         boxShadow: [
@@ -51,7 +52,7 @@ class ProjectCard extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3), // changes position of shadow
+            offset: const Offset(0, 3), // changes position of shadow
           ),
         ],
       ),
@@ -66,9 +67,11 @@ class ProjectCard extends StatelessWidget {
           ),
           Positioned(
             right: alignLeft ? null : 0,
-            child: CustomText(
-              text: accentText,
-              color: myAccent,
+            child: Obx(
+              () => CustomText(
+                text: accentText,
+                color: myAccentController.myAccentColor,
+              ),
             ),
           ),
 
