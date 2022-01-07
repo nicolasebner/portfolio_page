@@ -42,7 +42,7 @@ class PersonalCard extends StatelessWidget {
                 radius: 120,
               ),
               Image.asset(
-                "gif_1_transparent.gif",
+                "assets/gif_1_transparent.gif",
                 fit: BoxFit.scaleDown,
               ),
             ],

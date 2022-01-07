@@ -42,7 +42,7 @@ class _ProjectImageState extends State<ProjectImage> {
           image: DecorationImage(
             fit: BoxFit.fitHeight,
             image: AssetImage(
-              widget.imageRoute,
+              "assets/${widget.imageRoute}",
             ),
             colorFilter: _hover
                 ? null
