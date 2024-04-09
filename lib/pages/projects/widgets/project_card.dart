@@ -16,12 +16,14 @@ class ProjectCard extends StatelessWidget {
   final String usedTech;
   final Widget descriptionChild;
   final bool bigDescription;
+  final double marginPicture;
 
   const ProjectCard({
     Key? key,
     this.alignLeft = true,
     this.height = 300,
     required this.imageRoute,
+    this.marginPicture = 0,
     this.accentText = "",
     required this.title,
     required this.description,
@@ -61,7 +63,7 @@ class ProjectCard extends StatelessWidget {
           Positioned(
             child: ProjectImage(
                 imageRoute: imageRoute,
-                height: title.length > 40 ? height * 0.85 : height),
+                height: title.length > 30 ? height * 0.85 : height),
             bottom: usedTech.length > 50 ? 45 : 20,
             right: alignLeft ? 0 : null,
           ),

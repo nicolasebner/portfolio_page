@@ -41,6 +41,30 @@ class ProjectViewPage extends StatelessWidget {
             text: "PROJECTS_WORKING_STUDENT".tr,
           ),
           ProjectCard(
+            imageRoute: "prosiebenlogo.png",
+            title: "PROJECTS_PROSIEBEN_TITLE".tr,
+            accentText: "PROJECTS_PROSIEBEN_ACCENT".tr,
+            usedTech: "PROJECTS_PROSIEBEN_TECH".tr,
+            description: "PROJECTS_PROSIEBEN_DESCRIPTION".tr,
+            alignLeft: false,
+            height: 310,
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          ProjectCard(
+            imageRoute: "iteratec.jpg",
+            title: "PROJECTS_ITERATEC_TITLE".tr,
+            accentText: "PROJECTS_ITERATEC_ACCENT".tr,
+            usedTech: "PROJECTS_ITERATEC_TECH".tr,
+            description: "PROJECTS_ITERATEC_DESCRIPTION".tr,
+            alignLeft: true,
+            height: 340,
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          ProjectCard(
             imageRoute: "tech11_2.jpg",
             title: "PROJECTS_TECH11_TITLE".tr,
             accentText: "PROJECTS_TECH11_ACCENT".tr,
@@ -49,8 +73,46 @@ class ProjectViewPage extends StatelessWidget {
             alignLeft: false,
             height: 310,
           ),
-
           TextDivider(number: "02.", text: "PROJECTS_AT_UNIVERSITY".tr),
+          ProjectCard(
+            imageRoute: "legalaid.png",
+            title: "PROJECTS_TC_TITLE".tr,
+            accentText: "PROJECTS_TC_ACCENT".tr,
+            usedTech: "PROJECTS_TC_TECH".tr,
+            description: "PROJECTS_TC_DESCRIPTION".tr,
+            alignLeft: true,
+            height: 340,
+            descriptionChild: Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Obx(
+                () => ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      primary: myAccentController.myAccentColor),
+                  onPressed: () => openWeb("https://legalaid.web.app/"),
+                  icon: const FaIcon(
+                    FontAwesomeIcons.link,
+                    size: 16,
+                  ),
+                  label: const Text("Check it out!"),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          ProjectCard(
+            imageRoute: "kairos.png",
+            title: "PROJECTS_KAIROS_TITLE".tr,
+            accentText: "PROJECTS_KAIROS_ACCENT".tr,
+            usedTech: "PROJECTS_KAIROS_TECH".tr,
+            description: "PROJECTS_KAIROS_DESCRIPTION".tr,
+            alignLeft: false,
+            height: 318,
+          ),
+          const SizedBox(
+            height: 40,
+          ),
           ProjectCard(
             imageRoute: "bachelorarbeit_screen.jpg",
             title: ResponsiveWidget.isSmallerThanLargeScreen(context)
@@ -161,7 +223,7 @@ class ProjectViewPage extends StatelessWidget {
             accentText: "PROJECTS_UDEMY_ACCENT".tr,
             description: "PROJECTS_UDEMY_DESCRIPTION".tr,
             alignLeft: false,
-            height: 290,
+            height: 340,
             bigDescription: true,
           ),
           const SizedBox(

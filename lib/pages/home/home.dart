@@ -40,6 +40,30 @@ class HomeViewPage extends StatelessWidget {
                 ],
               ),
             ),
+
+            const Positioned(
+              bottom: 10,
+              right: 32,
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: Text(
+                  "Created with Flutter",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            ),
+            const Positioned(
+              bottom: 10,
+              right: 10,
+              child: Align(
+                  alignment: Alignment.bottomRight,
+                  child: FlutterLogo(
+                    size: 20,
+                  )),
+            ),
           ],
         ),
       ],

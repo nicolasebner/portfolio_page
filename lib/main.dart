@@ -11,10 +11,10 @@ import 'package:portfolio_website/pages/projects/projects.dart';
 import 'package:portfolio_website/routing/routes.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   Get.put(MenuController());
   Get.put(NavigationController());
   Get.put(MyAccentController());
-
   runApp(const MyApp());
 }
 
